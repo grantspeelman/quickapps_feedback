@@ -1,4 +1,4 @@
-require "quickapps_feedback/version"
+require 'quickapps_feedback/version'
 
 module QuickappsFeedback
   # Your code goes here...
