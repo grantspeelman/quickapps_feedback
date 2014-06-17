@@ -1,16 +1,20 @@
 require 'minitest/autorun'
-require 'rack/test'
+ENV['RACK_ENV'] = 'test'
+
 require '../lib/quickapps_feedback'
+require 'capybara'
+require 'capybara/dsl'
 
 describe 'test' do
-  include Rack::Test::Methods
+  include Capybara::DSL
+  # Capybara.default_driver = :selenium # <-- use Selenium driver
 
-  def app
-    QuickappsFeedback::App
+  def setup
+    Capybara.app = QuickappsFeedback::App.new
   end
 
-  def test_hello_world
-    get '/feedback'
-    last_response.must_be(:ok?)
+  def test_it_works
+    visit '/feedback'
+    assert page.has_content?('feedback here')
   end
 end
