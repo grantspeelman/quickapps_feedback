@@ -2,12 +2,11 @@ require 'quickapps_feedback/version'
 require 'quickapps_feedback/feedback'
 require 'quickapps_feedback/send_feedback_to_uservoice'
 require 'sinatra/base'
+require 'sinatra/flash'
 
 module QuickappsFeedback
   class App < Sinatra::Base
-    def flash
-      request.flash
-    end
+    register Sinatra::Flash
 
     get '/feedback' do
       erb :index

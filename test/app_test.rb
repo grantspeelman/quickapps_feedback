@@ -2,13 +2,6 @@ require 'minitest/autorun'
 ENV['RACK_ENV'] = 'test'
 
 require '../lib/quickapps_feedback'
-require 'sinatra/flash'
-module QuickappsFeedback
-  class App < Sinatra::Base
-    enable :sessions
-    register Sinatra::Flash
-  end
-end
 require 'capybara'
 require 'capybara/dsl'
 
