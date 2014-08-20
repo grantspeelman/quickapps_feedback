@@ -16,8 +16,8 @@ module QuickappsFeedback
       feedback = Feedback.new(request.env['HTTP_X_MXIT_USERID_R'] || session[:uid],
                               params[:full_message],params[:support_type])
       SendFeedbackToUservoice.new.perform(feedback)
-      flash[:notice] = 'thank you for your feedback'
-      redirect to('/')
+      flash('feedback_flash')[:notice] = 'thank you for your feedback'
+      redirect to('/feedback')
     end
 
     get '/feedback/new' do
