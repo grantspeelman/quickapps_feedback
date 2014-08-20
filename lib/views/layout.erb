@@ -7,8 +7,10 @@
   <link href="/assets/application.css" media="all" rel="stylesheet" />
 </head>
 <body class="ui-page-active">
-<% if flash('feedback_flash')[:notice] %>
-  <div class="alert alert-info" style="color:#00008b;"><%= flash('feedback_flash')[:notice] %></div>
+<% if params[:success] %>
+  <div class="alert alert-info" style="color:#00008b;">
+    thank you for your feedback
+  </div>
 <% end %>
 
 <%= yield %>
