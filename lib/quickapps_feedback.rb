@@ -5,6 +5,10 @@ require 'sinatra/base'
 
 module QuickappsFeedback
   class App < Sinatra::Base
+    def flash
+      request.flash
+    end
+
     get '/feedback' do
       erb :index
     end
