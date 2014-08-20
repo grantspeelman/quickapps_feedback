@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'quickapps_feedback/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'Quickapps feedback'
+  spec.name          = 'quickapps_feedback'
   spec.version       = QuickappsFeedback::VERSION
   spec.authors       = ['Grant Speelman']
   spec.email         = ['grant.speelman@ubxd.com']
