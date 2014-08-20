@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hangman Extreme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/assets/favicon.ico" rel="shortcut icon" />
+  <link href="/assets/application.css" media="all" rel="stylesheet" />
+</head>
+<body class="ui-page-active">
+<% if flash[:notice] %>
+  <div class="alert alert-info" style="color:#00008b;"><%= flash[:notice] %></div>
+<% elsif flash[:alert] %>
+  <div class="alert alert-block" style="color:#8b0000;"><%= flash[:alert] %></div>
+<% end %>
+
+<%= yield %>
+
+<ul>
+  <li>
+    <a href="/" id="home">Home</a>
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<form accept-charset="UTF-8" action="/feedback" method="post">
+  Enter your message or <a href="/">cancel</a>.<br/>
+  Type in following format <b>Subject:Message</b>, example : <br/>
+  <i>Fun Game:I really enjoy hangman extreme, keep up the good work!</i><br/>
+  <label for="feedback_full_message">Textarea:</label>
+  <input id="feedback_full_message" name="full_message" type="text" value=":" />
+  <input id="feedback_support_type" name="support_type" type="hidden" value="<%= support_type %>" />
+  <input name="commit" type="submit" value="send" />
+</form>
